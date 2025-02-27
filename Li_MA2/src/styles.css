@@ -1,0 +1,32 @@
+body{
+    background-color: white;
+    color: black;
+    display: grid;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.gridContainer{
+    margin-top: 20px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    justify-content: center;
+}
+
+.count{
+    font-size: 40px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: 1px solid gray;
+    cursor: pointer;
+    background-color: white;
+}
+
+.boxFilled{
+    background-color: black;
+}
