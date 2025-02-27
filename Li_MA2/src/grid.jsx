@@ -5,16 +5,26 @@ import {useState} from "react";
 export default function Grid(){
     const[boxes, fillBox] = useState([false, false, false, false]);
 
-    function toggleBox(idx) {
+    function toggleBox(idx) {       // creates new box arr w/ updated box at idx index
         const newBoxes = [...boxes];
         newBoxes[idx] = !boxes[idx];
         fillBox(newBoxes)
     }
 
+    function countFilled(boxes) {
+        let count = 0;
+        boxes.forEach(element => {
+            if (element) {
+                count += 1
+            }
+        });
+        return count
+    }
+
     return(
-        <div className = "gridContainer">
+        <div>
             <h2 className= "count">
-                Count: {boxes.filter(Boolean).length}
+                Count: {countFilled(boxes)}
             </h2>
 
             <div className = "grid">

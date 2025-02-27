@@ -5,14 +5,9 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 
-.gridContainer{
-    margin-top: 20px;
-}
-
 .grid{
     display: grid;
     grid-template-columns: repeat(2, 100px);
-    justify-content: center;
 }
 
 .count{
